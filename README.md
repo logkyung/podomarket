@@ -1,5 +1,7 @@
 # Podomarket
-<img src="https://user-images.githubusercontent.com/113345693/220639537-c038b318-c9c1-4f46-a351-f1520a01e6e4.gif"/>
+<div align='center'>
+  <img src="https://user-images.githubusercontent.com/113345693/220639537-c038b318-c9c1-4f46-a351-f1520a01e6e4.gif" />
+ </div>
 
 # Description
 포도마켓은 중고 물품 거래 웹사이트이다. 상품 이름, 가격, 상태, 사진 등을 포함한 게시글을 올릴 수 있고 물품 거래를 할 수 있다.
