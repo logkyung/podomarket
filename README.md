@@ -1,6 +1,6 @@
 # Podomarket
 <div align='center'>
-  <img src="https://user-images.githubusercontent.com/113345693/220639537-c038b318-c9c1-4f46-a351-f1520a01e6e4.gif" />
+  <img width="80%" src="https://user-images.githubusercontent.com/113345693/220639537-c038b318-c9c1-4f46-a351-f1520a01e6e4.gif" />
  </div>
 
 # Description
