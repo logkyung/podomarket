@@ -1,3 +1,4 @@
+from typing import Any, Dict
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from django.views.generic import (
@@ -11,7 +12,7 @@ from braces.views import LoginRequiredMixin, UserPassesTestMixin
 from allauth.account.forms import EmailAddress
 from allauth.account.views import PasswordChangeView
 from .models import Post, User
-from .forms import PostCreateForm, PostUpdateForm, ProfileForm
+from .forms import PostCreateForm, PostUpdateForm, ProfileForm, CommentForm
 from .functions import confirmation_required_redirect
 
 # Create your views here.
@@ -25,10 +26,15 @@ class IndexView(ListView):
         return Post.objects.filter(is_sold=False)
 
 
-class PostDetailView(LoginRequiredMixin, DetailView):
+class PostDetailView(DetailView):
     model = Post
     template_name = 'podomarket/post_detail.html'
     pk_url_kwarg = 'post_id'
+
+    def get_context_data(self, **kwargs: Any):
+        context = super().get_context_data(**kwargs)
+        context['form'] = CommentForm()
+        return context
 
 
 class PostCreateView(LoginRequiredMixin, UserPassesTestMixin, CreateView):

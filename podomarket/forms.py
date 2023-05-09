@@ -1,5 +1,5 @@
 from django import forms
-from .models import User, Post
+from .models import User, Post, Comment
 
 
 class PostCreateForm(forms.ModelForm):
@@ -46,3 +46,14 @@ class ProfileForm(forms.ModelForm):
             'address',
             'profile_pic',
         ]
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = [
+            'content',
+        ]
+        widgets = {
+            'content': forms.Textarea,
+        }
